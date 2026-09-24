@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f1e8;
+    color: #18352f;
+    min-height: 100vh;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #18352f;
+    color: #f5f1e8;
+    padding: 22px 7%;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand h1 {
+    font-size: 2rem;
+}
+
+.brand p {
+    font-size: 0.95rem;
+    opacity: 0.85;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+}
+
+.hero {
+    padding: 70px 0 45px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.6rem;
+    margin-bottom: 12px;
+}
+
+.hero > p {
+    color: #54706a;
+    margin-bottom: 30px;
+}
+
+.search-form {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.search-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.search-row {
+    display: flex;
+    gap: 10px;
+}
+
+#image-search {
+    flex: 1;
+    padding: 15px 18px;
+    border: 2px solid #9bb7a9;
+    border-radius: 10px;
+    background: white;
+    font-size: 1rem;
+}
+
+#image-search:focus {
+    outline: 3px solid #b8d8c8;
+    border-color: #39765d;
+}
+
+#search-button,
+#clear-button {
+    border: none;
+    border-radius: 10px;
+    padding: 0 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#search-button {
+    background: #39765d;
+    color: white;
+}
+
+#clear-button {
+    background: #d9e4dc;
+    color: #18352f;
+}
+
+#search-button:hover {
+    background: #285a45;
+}
+
+#clear-button:hover {
+    background: #c3d5ca;
+}
+
+.quick-picks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.quick-picks span {
+    font-weight: bold;
+}
+
+.quick-picks button {
+    border: 1px solid #9bb7a9;
+    background: transparent;
+    color: #285a45;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.quick-picks button:hover {
+    background: #dcebe2;
+}
+
+.results-section {
+    padding-bottom: 70px;
+}
+
+.results-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.results-heading h2 {
+    font-size: 1.7rem;
+}
+
+#result-count {
+    color: #54706a;
+    font-size: 0.9rem;
+}
+
+/* Responsive image grid for Part 2 */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    min-height: 100px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 50px 20px;
+    color: #54706a;
+    background: #e9eee9;
+    border-radius: 14px;
+    margin-top: 20px;
+}
+
+@media (max-width: 650px) {
+    .brand {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero {
+        padding-top: 45px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .search-row {
+        flex-direction: column;
+    }
+
+    #search-button,
+    #clear-button {
+        min-height: 45px;
+    }
+
+    .results-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+}
